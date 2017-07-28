@@ -16,7 +16,7 @@ At anytime during the transition, the intermediate state which is also called a 
 ## Basic Usage
 Move a circle straight to the right side
 
-```
+```js
 var canvas = document.getElementById('canvas')
 var cnm = new Canimation(canvas, window.innerWidth, window.innerHeight);
 cnm.createAnimation({
@@ -35,7 +35,7 @@ cnm.createAnimation({
 ```
 
 Let the circle scale up at the same time
-```
+```js
 cnm.createAnimation({
   circle: {
     from: {
@@ -53,7 +53,7 @@ cnm.createAnimation({
 ```
 
 Move more than one circle to any space
-```
+```js
 cnm.createAnimation({
   circle: {
     from: [{
@@ -108,7 +108,7 @@ var cnm = new Canimation(canvas, w, h);
 cnm.createAnimation(options, loop);
 ```
 
-- options 的每个属性表示一个或一组 canvas 元素，目前支持粒子（circle）、椭圆曲线（arc）、数字文本（text）
+- options 的每个属性表示一个或一组 canvas 元素，目前支持粒子（circle）、椭圆曲线（arc）、文本（text）
 - 属性值为一个对象，表示一个基本动画，称为 action，它具有以下属性：
 
 ```js
@@ -154,7 +154,6 @@ cnm.createAnimation(options, loop);
   to: [],
   duration: 2000
 }
-
 ```
 - 只有数值型的参数才可以用于动效
 
@@ -199,6 +198,7 @@ text: {
     font: '14px Arial'      // 文本大小和字体
   }
 }
+```
 
 ### to 属性
 from 中所有数值型的属性，均可以作为 to 的属性，注意保持结构上一一对应
@@ -220,3 +220,6 @@ arcTo: {
 ```
 
 注意，要确保元素沿椭圆轨迹运行，元素初始位置必须设置在椭圆轨迹之上
+
+## 其它
+关于 arc 角度，[参考](http://www.w3school.com.cn/tags/canvas_arc.asp)
