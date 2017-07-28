@@ -52,7 +52,7 @@ cnm.createAnimation({
 });
 ```
 
-Move more than one circle to any space
+Move more than one circle to anywhere
 ```js
 cnm.createAnimation({
   circle: {
