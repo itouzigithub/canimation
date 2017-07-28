@@ -122,6 +122,8 @@ cnm.createAnimation(options, loop);
 ```
 
 - 如果同一个 action 中有多个同类元素，则将 from 设为数组，相应的 to 或 arcTo 也必须是对应的数组
+- to 和 arcTo 只能存在一个，如果都存在，则 to 会被忽略
+
 ```js
 {
   from: [{
